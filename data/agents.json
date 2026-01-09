@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "bharat",
+    "name": "Bharat Shetty",
+    "company": "DealGenie AI \u2022 Demo Agent",
+    "tagline": "Luxury deals. Fast answers. AI-powered follow\u2011up.",
+    "area": "St. John\u2019s, NL",
+    "language": "EN",
+    "specialty": "Buyer \u2022 Seller \u2022 Mortgage",
+    "license": "License: Demo\u201112345",
+    "phone": "+17095551234",
+    "email": "dealgenieai.global@gmail.com",
+    "website": "https://dealgenieai.com",
+    "photo": "/assets/img/bharat.jpg",
+    "listings": [
+      {
+        "title": "Harbour View \u2022 Modern Condo",
+        "price": "$489,900",
+        "beds": 2,
+        "baths": 2,
+        "type": "Condo",
+        "city": "St. John\u2019s",
+        "image": "/assets/img/listing1.jpg"
+      },
+      {
+        "title": "Family Home \u2022 Quiet Street",
+        "price": "$629,000",
+        "beds": 4,
+        "baths": 3,
+        "type": "Detached",
+        "city": "Mount Pearl",
+        "image": "/assets/img/listing2.jpg"
+      },
+      {
+        "title": "Downtown Loft \u2022 Walkable Lifestyle",
+        "price": "$399,000",
+        "beds": 1,
+        "baths": 1,
+        "type": "Loft",
+        "city": "St. John\u2019s",
+        "image": "/assets/img/listing3.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "sophia",
+    "name": "Sophia Laurent",
+    "company": "Aurora Realty",
+    "tagline": "Sharp pricing, smooth negotiations, premium presentation.",
+    "area": "Halifax, NS",
+    "language": "EN/FR",
+    "specialty": "Luxury Listings",
+    "license": "License: NS\u201188910",
+    "phone": "+19025550111",
+    "email": "sophia@example.com",
+    "website": "https://example.com",
+    "photo": "/assets/img/agent2.jpg",
+    "listings": [
+      {
+        "title": "Oceanfront \u2022 New Build",
+        "price": "$1,295,000",
+        "beds": 3,
+        "baths": 3,
+        "type": "Luxury",
+        "city": "Halifax",
+        "image": "/assets/img/listing1.jpg"
+      },
+      {
+        "title": "Executive Townhome",
+        "price": "$749,900",
+        "beds": 3,
+        "baths": 3,
+        "type": "Townhome",
+        "city": "Bedford",
+        "image": "/assets/img/listing2.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "jordan",
+    "name": "Jordan Chen",
+    "company": "NorthStar Homes",
+    "tagline": "Data-driven buying strategy with AI lead response.",
+    "area": "Toronto, ON",
+    "language": "EN",
+    "specialty": "First-time Buyers",
+    "license": "License: ON\u201155109",
+    "phone": "+14165550123",
+    "email": "jordan@example.com",
+    "website": "https://example.com",
+    "photo": "/assets/img/agent3.jpg",
+    "listings": [
+      {
+        "title": "Starter Condo \u2022 Transit Friendly",
+        "price": "$549,000",
+        "beds": 1,
+        "baths": 1,
+        "type": "Condo",
+        "city": "Toronto",
+        "image": "/assets/img/listing3.jpg"
+      }
+    ]
+  }
+]
