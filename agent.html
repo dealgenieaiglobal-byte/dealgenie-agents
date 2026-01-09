@@ -1,14 +1,60 @@
-<!doctype html>
+[2:14 a.m., 2026-01-09] Bharat: /* DealGenie AI — Luxury Agent Page (Option A: White + Gold + Serif) */
+
+:root{
+  --bg:#ffffff;
+  --bg-soft:#fbfbfd;
+  --ink:#0b1220;
+  --muted:rgba(11,18,32,.65);
+  --stroke:rgba(11,18,32,.10);
+
+  --gold:#c7a24a;
+  --gold-2:#e6d3a6;
+
+  --shadow: 0 18px 50px rgba(11,18,32,.10);
+  --shadow-soft: 0 10px 28px rgba(11,18,32,.08);
+
+  --r:18px;
+  --max: 1140px;
+
+  --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background:
+    radial-gradient(900px 500px at 12% 8%, rgba(199,162,74,.10), transparent 55%),
+    radial-gradient(900px 600px at 92% 18%, rgb…
+[2:21 a.m., 2026-01-09] Bharat: <!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DealGenie AI</title>
+  <script>
+    // Change "bharat" later to dynamic slug or your default agent
+    location.replace("/agent/bharat");
+  </script>
+</head>
+<body></body>
+</html>
+[2:24 a.m., 2026-01-09] Bharat: <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agent • DealGenie AI</title>
+  <meta name="description" content="Luxury agent page powered by DealGenie AI." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css" />
@@ -18,12 +64,12 @@
 <!-- Top Bar -->
 <header class="topbar">
   <div class="wrap topbar__inner">
-    <div class="brand">
+    <a class="brand" href="/" aria-label="DealGenie AI">
       <span class="brand__mark"></span>
       <span class="brand__text">DealGenie <em>AI</em></span>
-    </div>
+    </a>
 
-    <nav class="topnav">
+    <nav class="topnav" aria-label="Primary">
       <a href="#listings">Listings</a>
       <a href="#contact">Contact</a>
       <a class="pill" href="#chat">Chat Now</a>
@@ -31,118 +77,176 @@
   </div>
 </header>
 
-<main class="wrap" style="padding:28px 0 40px;">
+<main>
 
-  <!-- AGENT HEADER -->
-  <section class="card">
-    <div class="agent-card__top">
-      <img id="agentPhoto" class="agent-photo" src="" alt="Agent photo" />
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__inner">
 
-      <div>
-        <div class="kicker"><span class="dot"></span><span id="agentCompany">Real Estate</span></div>
-        <h1 id="agentName">Agent Name</h1>
-        <p id="agentTagline" class="lead">
-          Local expertise powered by AI concierge.
+      <div class="hero__left">
+        <div class="kicker">
+          <span class="dot"></span>
+          <span id="agentCompany">Luxury Real Estate</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span id="agentName">Agent Name</span>
+        </h1>
+
+        <p id="agentTagline" class="hero__subtitle">
+          Local expertise. Beautiful homes. AI-powered follow-up.
         </p>
 
-        <div class="badges">
-          <span class="badge" id="agentArea">Area</span>
-          <span class="badge" id="agentSpecialty">Buy / Sell</span>
-          <span class="badge" id="agentLang">EN</span>
+        <div class="meta-row">
+          <span class="chip" id="agentArea">Area</span>
+          <span class="chip" id="agentSpecialty">Buyer • Seller</span>
+          <span class="chip" id="agentLang">EN</span>
         </div>
 
-        <div class="hero__actions" style="margin-top:14px;">
+        <div class="cta-row">
           <a id="btnCall" class="btn btn--gold" href="#">Call</a>
           <a id="btnEmail" class="btn btn--ghost" href="#">Email</a>
-          <a id="btnWebsite" class="btn btn--ghost" href="#" target="_blank">Website</a>
+          <a id="btnWebsite" class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Website</a>
         </div>
 
-        <div id="agentLicense" class="muted small" style="margin-top:10px;"></div>
+        <div id="agentLicense" class="fineprint"></div>
+
+        <div class="trustbar">
+          <div class="trust">
+            <div class="trust__top">24/7</div>
+            <div class="trust__bottom">AI Concierge</div>
+          </div>
+          <div class="trust">
+            <div class="trust__top">Fast</div>
+            <div class="trust__bottom">Response Time</div>
+          </div>
+          <div class="trust">
+            <div class="trust__top">Qualified</div>
+            <div class="trust__bottom">Lead Routing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="portrait-card">
+          <div class="portrait-glow"></div>
+          <img id="agentPhoto" class="portrait" alt="Agent photo" />
+          <div class="portrait-badge">
+            <span class="portrait-badge__dot"></span>
+            <span>Verified Agent</span>
+          </div>
+        </div>
+
+        <div class="mini-card">
+          <div class="mini-card__title">Quick actions</div>
+          <div class="mini-actions">
+            <a class="mini-btn" href="#chat">Ask the AI</a>
+            <a class="mini-btn" href="#listings">View listings</a>
+            <a class="mini-btn" href="#contact">Request a callback</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHAT / AI -->
+  <section id="chat" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Ask anything</h2>
+          <p class="sub">
+            Use the AI concierge to get instant answers and get matched to the right next step.
+          </p>
+        </div>
+        <a class="btn btn--ghost" href="#contact">Prefer a callback?</a>
+      </div>
+
+      <div class="callout">
+        <div class="callout__title">Chat is available on this page (bottom-right)</div>
+        <div class="callout__text">
+          Ask about homes, neighborhoods, financing, timelines, and more — the assistant qualifies your needs and routes the request to the agent.
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- AI CHAT -->
-  <section id="chat" class="section">
-    <div class="section-head">
-      <h2>Ask anything</h2>
-      <p class="sub">
-        The AI assistant qualifies your needs and routes the request to the agent.
-      </p>
-    </div>
-
-    <div class="card">
-      <p class="muted small">
-        Start chatting below. If you prefer, leave your details and we’ll get back to you.
-      </p>
-      <!-- Botpress loads as floating widget -->
-    </div>
-  </section>
-
   <!-- LISTINGS -->
-  <section id="listings" class="section">
-    <div class="section-head">
-      <h2>Listings</h2>
-      <p class="sub">Featured properties.</p>
-    </div>
+  <section id="listings" class="section section--soft">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Featured listings</h2>
+          <p class="sub">Hand-picked properties to match what buyers are asking for most.</p>
+        </div>
+      </div>
 
-    <div id="listingGrid" class="listing-grid"></div>
+      <div id="listingGrid" class="listing-grid"></div>
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section--alt">
-    <div class="section-head">
-      <h2>Contact</h2>
-      <p class="sub">Leave your details and the agent will get back to you.</p>
-    </div>
-
-    <div class="grid2">
-      <!-- FORM -->
-      <form id="leadForm" class="card">
-        <label class="field">
-          <span>Name             </span>
-          <input name="name" required />
-        </label>
-
-        <label class="field">
-          <span>Email</span>
-          <input type="email" name="email" required />
-        </label>
-
-        <label class="field">
-          <span>Phone</span>
-          <input name="phone" />
-        </label>
-
-        <label class="field">
-          <span>Message</span>
-          <textarea name="message" rows="4"></textarea>
-        </label>
-
-        <button class="btn btn--gold" type="submit">
-          Send
-        </button>
-
-        <div id="formStatus" class="muted small"></div>
-      </form>
-
-      <!-- QUICK CONTACT -->
-      <div class="card">
-        <h3>Direct contact</h3>
-
-        <div style="margin-top:14px;">
-          <div class="muted small">Call</div>
-          <a id="contactCall" style="font-weight:900;" href="#">—</a>
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p class="sub">Share a few details — we’ll get back to you quickly.</p>
         </div>
+      </div>
 
-        <div style="margin-top:14px;">
-          <div class="muted small">Email</div>
-          <a id="contactEmail" style="font-weight:900;" href="#">—</a>
-        </div>
+      <div class="grid2">
+        <!-- FORM -->
+        <form class="card" id="leadForm">
+          <div class="form-title">Request a callback</div>
 
-        <div style="margin-top:14px;">
-          <div class="muted small">Website</div>
-          <a id="contactWeb" style="font-weight:900;" href="#" target="_blank">—</a>
+          <label class="field">
+            <span>Name</span>
+            <input name="name" required placeholder="John Smith" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="john@email.com" />
+          </label>
+
+          <label class="field">
+            <span>Phone</span>
+            <input name="phone" placeholder="+1 (555) 555-5555" />
+          </label>
+
+          <label class="field">
+            <span>What are you looking for?</span>
+            <textarea name="message" rows="4" placeholder="Buying, selling, mortgage, evaluation..."></textarea>
+          </label>
+
+          <button class="btn btn--gold" type="submit">Send</button>
+          <div class="fineprint" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- DIRECT -->
+        <div class="card">
+          <div class="form-title">Direct contact</div>
+
+          <div class="direct">
+            <div class="direct__label">Call</div>
+            <a id="contactCall" class="direct__value" href="#">—</a>
+          </div>
+
+          <div class="direct">
+            <div class="direct__label">Email</div>
+            <a id="contactEmail" class="direct__value" href="#">—</a>
+          </div>
+
+          <div class="direct">
+            <div class="direct__label">Website</div>
+            <a id="contactWeb" class="direct__value" href="#" target="_blank" rel="noreferrer">—</a>
+          </div>
+
+          <div class="note">
+            Tip: Visitors can use the chat bubble to get instant answers. You’ll receive qualified lead details.
+          </div>
         </div>
       </div>
     </div>
@@ -152,18 +256,15 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <div class="muted">© <span id="year"></span> DealGenie AI</div>
-    <div class="muted">Agent page</div>
+    <div class="muted">© <span id="y"></span> DealGenie AI</div>
+    <div class="muted">Luxury Agent Page</div>
   </div>
 </footer>
 
 <!-- Scripts -->
 <script src="/assets/config.js"></script>
 <script src="/assets/agent.js"></script>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
