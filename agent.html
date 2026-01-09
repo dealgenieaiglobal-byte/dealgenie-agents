@@ -4,191 +4,166 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agent • DealGenie AI</title>
-  <meta name="description" content="DealGenie AI agent mini-site." />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-  <div class="bg-orbit" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <a class="brand" href="/" aria-label="DealGenie AI Home">
-        <span class="brand__mark"></span>
-        <span class="brand__text">DealGenie <em>AI</em></span>
-      </a>
-
-      <nav class="topnav" aria-label="Primary">
-        <a href="#listings">Listings</a>
-        <a href="#contact">Contact</a>
-        <a href="/" class="pill">Back</a>
-      </nav>
+<!-- Top Bar -->
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <span class="brand__mark"></span>
+      <span class="brand__text">DealGenie <em>AI</em></span>
     </div>
-  </header>
 
-  <main class="agent">
-    <section class="agent-hero">
-      <div class="wrap agent-hero__grid">
-        <div class="agent-hero__left">
-          <div class="agent-card">
-            <div class="agent-card__top">
-              <img id="agentPhoto" class="agent-photo" alt="Agent photo" />
-              <div class="agent-meta">
-                <div class="kicker"><span class="dot"></span><span id="agentCompany">Real Estate</span></div>
-                <h1 id="agentName">Agent Name</h1>
-                <p id="agentTagline" class="lead">Your local guide — fast answers, smart deals.</p>
+    <nav class="topnav">
+      <a href="#listings">Listings</a>
+      <a href="#contact">Contact</a>
+      <a class="pill" href="#chat">Chat Now</a>
+    </nav>
+  </div>
+</header>
 
-                <div class="badges">
-                  <span class="badge" id="agentArea">Area</span>
-                  <span class="badge" id="agentLang">EN</span>
-                  <span class="badge" id="agentSpecialty">Buyer/Seller</span>
-                </div>
+<main class="wrap" style="padding:28px 0 40px;">
 
-                <div class="hero__actions">
-                  <a id="btnCall" class="btn btn--gold" href="#">Call</a>
-                  <a id="btnEmail" class="btn btn--ghost" href="#">Email</a>
-                </div>
+  <!-- AGENT HEADER -->
+  <section class="card">
+    <div class="agent-card__top">
+      <img id="agentPhoto" class="agent-photo" src="" alt="Agent photo" />
 
-                <div class="muted small" id="agentLicense"></div>
-              </div>
-            </div>
+      <div>
+        <div class="kicker"><span class="dot"></span><span id="agentCompany">Real Estate</span></div>
+        <h1 id="agentName">Agent Name</h1>
+        <p id="agentTagline" class="lead">
+          Local expertise powered by AI concierge.
+        </p>
 
-            <div class="agent-card__bottom">
-              <div class="quick">
-                <div class="quick__item">
-                  <div class="mini__label">Instant home value</div>
-                  <div class="mini__value">AI evaluation</div>
-                </div>
-                <div class="quick__item">
-                  <div class="mini__label">Mortgage help</div>
-                  <div class="mini__value">Pre‑approval</div>
-                </div>
-                <div class="quick__item">
-                  <div class="mini__label">24/7 replies</div>
-                  <div class="mini__value">Agent + AI</div>
-                </div>
-              </div>
-
-              <div class="note">
-                This page is data‑driven. Edit <code>/data/agents.json</code> to update content.
-              </div>
-            </div>
-          </div>
+        <div class="badges">
+          <span class="badge" id="agentArea">Area</span>
+          <span class="badge" id="agentSpecialty">Buy / Sell</span>
+          <span class="badge" id="agentLang">EN</span>
         </div>
 
-        <aside class="agent-hero__right">
-          <div class="panel">
-            <div class="panel__top">
-              <div class="chip">How can I help?</div>
-              <div class="panel__icons" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="panel__body">
-              <div class="grid2">
-                <div class="card card--tight">
-                  <h3>Buy</h3>
-                  <p class="muted">Budget, neighborhoods, and listings matched to you.</p>
-                </div>
-                <div class="card card--tight">
-                  <h3>Sell</h3>
-                  <p class="muted">Pricing strategy and a clean selling plan.</p>
-                </div>
-                <div class="card card--tight">
-                  <h3>Mortgage</h3>
-                  <p class="muted">Pre‑approval questions and lender options.</p>
-                </div>
-                <div class="card card--tight">
-                  <h3>Anything</h3>
-                  <p class="muted">Ask DealGenie AI right here on the page.</p>
-                </div>
-              </div>
+        <div class="hero__actions" style="margin-top:14px;">
+          <a id="btnCall" class="btn btn--gold" href="#">Call</a>
+          <a id="btnEmail" class="btn btn--ghost" href="#">Email</a>
+          <a id="btnWebsite" class="btn btn--ghost" href="#" target="_blank">Website</a>
+        </div>
 
-              <div class="note">
-                Botpress embed: set <code>window.DG_BOTPRESS.enabled = true</code> in <code>/assets/config.js</code>.
-              </div>
-
-              <div id="botpressMount" class="botpress-mount" aria-label="Chat widget mount"></div>
-            </div>
-          </div>
-        </aside>
+        <div id="agentLicense" class="muted small" style="margin-top:10px;"></div>
       </div>
-    </section>
-
-    <section id="listings" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Featured listings</h2>
-          <p class="sub">Sample cards — replace with your MLS feed or Airtable listings table later.</p>
-        </div>
-
-        <div id="listingGrid" class="listing-grid"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section--alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p class="sub">Quick form (demo). Wire this to Make.com → Airtable to capture leads.</p>
-        </div>
-
-        <div class="grid2">
-          <form class="card" id="leadForm">
-            <label class="field">
-              <span>Name</span>
-              <input name="name" required placeholder="John Smith" />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input type="email" name="email" required placeholder="john@email.com" />
-            </label>
-            <label class="field">
-              <span>Phone</span>
-              <input name="phone" placeholder="+1 (555) 555‑5555" />
-            </label>
-            <label class="field">
-              <span>What are you looking for?</span>
-              <textarea name="message" rows="4" placeholder="Buying, selling, mortgage, evaluation…"></textarea>
-            </label>
-
-            <button class="btn btn--gold" type="submit">Send</button>
-            <div class="muted small" id="formStatus" role="status" aria-live="polite"></div>
-          </form>
-
-          <div class="card">
-            <h3>Fast options</h3>
-            <div class="list">
-              <div class="list__row"><span class="muted">Call:</span> <a id="contactCall" href="#">—</a></div>
-              <div class="list__row"><span class="muted">Email:</span> <a id="contactEmail" href="#">—</a></div>
-              <div class="list__row"><span class="muted">Website:</span> <a id="contactWeb" href="#" target="_blank" rel="noreferrer">—</a></div>
-            </div>
-
-            <div class="note">
-              To connect this form: set <code>window.DG_FORM.webhookUrl</code> in <code>/assets/config.js</code>.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="muted">© <span id="y"></span> DealGenie AI</div>
-      <div class="muted">Agent mini-site demo</div>
     </div>
-  </footer>
+  </section>
 
-  <script src="/assets/config.js"></script>
-  <script src="/assets/router.js"></script>
-  <script src="/assets/agent.js"></script>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- AI CHAT -->
+  <section id="chat" class="section">
+    <div class="section-head">
+      <h2>Ask anything</h2>
+      <p class="sub">
+        The AI assistant qualifies your needs and routes the request to the agent.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="muted small">
+        Start chatting below. If you prefer, leave your details and we’ll get back to you.
+      </p>
+      <!-- Botpress loads as floating widget -->
+    </div>
+  </section>
+
+  <!-- LISTINGS -->
+  <section id="listings" class="section">
+    <div class="section-head">
+      <h2>Listings</h2>
+      <p class="sub">Featured properties.</p>
+    </div>
+
+    <div id="listingGrid" class="listing-grid"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--alt">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p class="sub">Leave your details and the agent will get back to you.</p>
+    </div>
+
+    <div class="grid2">
+      <!-- FORM -->
+      <form id="leadForm" class="card">
+        <label class="field">
+          <span>Name             </span>
+          <input name="name" required />
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+
+        <label class="field">
+          <span>Phone</span>
+          <input name="phone" />
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="4"></textarea>
+        </label>
+
+        <button class="btn btn--gold" type="submit">
+          Send
+        </button>
+
+        <div id="formStatus" class="muted small"></div>
+      </form>
+
+      <!-- QUICK CONTACT -->
+      <div class="card">
+        <h3>Direct contact</h3>
+
+        <div style="margin-top:14px;">
+          <div class="muted small">Call</div>
+          <a id="contactCall" style="font-weight:900;" href="#">—</a>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="muted small">Email</div>
+          <a id="contactEmail" style="font-weight:900;" href="#">—</a>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="muted small">Website</div>
+          <a id="contactWeb" style="font-weight:900;" href="#" target="_blank">—</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="muted">© <span id="year"></span> DealGenie AI</div>
+    <div class="muted">Agent page</div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/config.js"></script>
+<script src="/assets/agent.js"></script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
